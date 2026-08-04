@@ -1,0 +1,326 @@
+:root {
+  --favcolor: rgba(33, 158, 216, 0.288);
+}
+
+.section {
+  width: 100%;
+
+  >h2 {
+    color: white;
+    font-size: 50px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 60px;
+  }
+
+  >h4 {
+    color: white;
+    font-size: 20px;
+    margin-left: 90px;
+  }
+}
+
+.section1 {
+  margin-left: 60px;
+  margin-top: 20px;
+}
+
+.z{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    >.row {
+        width: 90%;
+        height: 100vh;
+        display: flex;
+        /* background-color: black; */
+        justify-content: center;
+        align-items: center;
+        >.diivall{
+            width: 100%;
+            height: 100%;
+            /* background-color: rgb(0, 0, 0); */
+            border-radius: 20px;
+            display: grid;
+            grid-template-columns: repeat(4 , 25%);
+            grid-template-rows: repeat(3 , 30%);
+            gap: 20px;
+            justify-content: center;
+            align-content: center;
+            >*{
+                /* border: 2px solid red; */
+            }
+            >figure{
+                position: relative;
+                border-radius: 20px;
+                &:nth-of-type(1){
+                    grid-row: 1 / span 1;
+                }
+                &:nth-of-type(2){
+                    grid-row: 1 / span 2;
+                    grid-column: 2 / span 1;
+                }
+                &:nth-of-type(4){
+                    grid-row: 2 / span 2;
+                    grid-column: 1 / span 1;
+                }
+                &:nth-of-type(8){
+                  grid-column: 2 /span 2;
+                }
+                >img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 20px;
+                    transition: 1.5s;
+                    &:hover{
+                        scale: 1.1;
+                    }
+                }
+                >figcaption{
+                    width: 100%;
+                    height: 12%;
+                    background-image: linear-gradient(pink 50%, blue 170%);
+                    position: absolute;
+                    top: 90%;
+                    left: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 20px;
+                    
+                }
+            }
+        }
+    }
+}
+
+.fixed-profile {
+    position: fixed;
+    left: 20px;
+    bottom: 7px;
+    display: flex;
+    align-items: center;
+    gap:0;
+    z-index: 9999;
+}
+
+
+.title {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 13px;
+    color: #ffffff;
+    margin-left: -6px;
+}
+
+
+.circle-wrapper {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    margin-left: -22px;
+}
+
+
+.circle-wrapper img {
+    width: 130px;
+    height: 130px;
+    /* border-radius: 50% 50% 50% 50%; */
+    border-radius: 40px;
+    object-fit: cover;
+    border: 3px solid #eee;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+
+.icon {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    background: #7be5ff;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+    font-size: 17px;
+
+    opacity: 0;
+    transform: scale(6px);
+    transition: 0.4s;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+}
+
+.circle-wrapper:hover .icon {
+    opacity: 1;
+}
+
+
+.icon:nth-child(5) { top: 10%;left: 75%; }  
+.icon:nth-child(3) { top: 30%;left: 85%; }  
+.icon:nth-child(4) { top: 53%; left: 85%; }  
+.icon:nth-child(2) { top: 73%;left: 75%; } 
+
+.instagram {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+}
+
+.telegram {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+}
+
+.github {
+    bottom:0;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+}
+
+.mail {
+   left: 0;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+}
+
+
+.circle-wrapper:hover .icon {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.icon:hover {
+    background: #ff7a00;
+    color: #ffffff;
+}
+
+
+/* ----------- */
+
+.footer {
+  background: #0f0f1a;
+  padding: 90px 20px 60px;          /* فضای بیشتر از بالا برای عکس بزرگ */
+  text-align: center;
+  border-top: 1px solid rgba(0, 255, 255, 0.08);
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.profile-pic {
+  margin: 0 auto 40px auto;
+  width: fit-content;
+  margin-top: 70px;
+}
+
+.profile-pic img {
+  width: 300px;                     /* خیلی بزرگ‌تر */
+  height: 300px;                    /* مربع کامل */
+  object-fit: cover;                /* عکس بدون کشیدگی */
+  border: 6px solid #00f0ff;
+  box-shadow: 
+    0 0 40px rgba(0, 240, 255, 0.7),
+    inset 0 0 25px rgba(0, 240, 255, 0.5);
+  transition: all 0.4s ease;
+  border-radius: 0;                 /* مربع → بدون گردی */
+}
+
+.profile-pic img:hover {
+  transform: scale(1.08);
+  box-shadow: 
+    0 0 70px #00f0ff,
+    0 0 100px rgba(0, 240, 255, 0.6);
+}
+
+.about-text {
+  margin-bottom: 50px;
+  color: #e0f7ff;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.about-text h3 {
+  font-size: 1.9rem;
+  margin-bottom: 16px;
+  color: #00f0ff;
+  text-shadow: 0 0 15px rgba(0, 240, 255, 0.7);
+}
+
+.about-text p {
+  font-size: 1.12rem;
+  line-height: 1.8;
+  color: #b0e0ff;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 45px;
+}
+
+.social-icons a {
+  color: #00f0ff;
+  font-size: 2.6rem;
+  transition: all 0.4s ease;
+  text-shadow: 0 0 18px rgba(0, 240, 255, 0.7);
+}
+
+.social-icons a:hover {
+  transform: translateY(-12px) scale(1.3);
+  color: #ffffff;
+  text-shadow: 
+    0 0 30px #00f0ff,
+    0 0 60px #00f0ff;
+}
+
+.copyright {
+  color: #8899a6;
+  font-size: 1.05rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* موبایل – عکس کمی کوچکتر میشه که صفحه رو خراب نکنه */
+@media (max-width: 680px) {
+  .profile-pic img {
+    width: 240px;
+    height: 240px;
+    border-width: 5px;
+  }
+  
+  .social-icons {
+    gap: 40px;
+  }
+  
+  .social-icons a {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-pic img {
+    width: 200px;
+    height: 200px;
+  }
+}
